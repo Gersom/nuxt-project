@@ -9,23 +9,33 @@
 </template>
 
 <script>
-export default {
-  data () {
-    return {
+  import { mapActions, mapGetters } from 'vuex'
+  export default {
+    data () {
+      return {
+      }
+    },
 
-    }
-  },
-  methods: {
-    toUserId (id) {
-      this.$router.push({
-        name: 'users-id',
-        params: {
-          id: id
-        }
-      })
+    methods: {
+      ...mapActions(['beginUsers']),
+      toUserId (id) {
+        this.$router.push({
+          name: 'users-id',
+          params: {
+            id: id
+          }
+        })
+      }
+    },
+
+    computed: {
+      ...mapGetters(['users'])
+    },
+
+    created () {
+      this.beginUsers()
     }
   }
-}
 </script>
 
 <style lang="css">
