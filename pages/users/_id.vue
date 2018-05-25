@@ -1,11 +1,24 @@
-<template lang="html">
-  <div class="">
-    <h2>el {{$route.params.id}}</h2>
+<template lang="pug">
+  .UserId
+    div
+      div
+        figure
+          img(:src="usersSelected.avatar_url")
+          caption {{usersSelected.name}}
+          p {{usersSelected.login}}
+      div
+        p Blog: {{usersSelected.blog}}
+        p Company: {{usersSelected.company}}
+        p Followers: {{usersSelected.followers}}
+        p Following: {{usersSelected.following}}
+        p Gists: {{usersSelected.public_gists}}
+        p Location: {{usersSelected.location}}
+        p Profile: {{usersSelected.html_url}}
+        p Repositories: {{usersSelected.public_repos}}
 
-    <button @click="back">
-      Regresar
-    </button>
-  </div>
+    button(class="button--green",
+        @click="$router.push({name: 'users'})")
+      |Regresar
 </template>
 
 <script>
@@ -19,11 +32,9 @@
 
     methods: {
       ...mapActions(['requestUserId']),
-      back () {
-        this.$router.push({
-          name: 'users'
-        })
-      }
+    },
+    computed: {
+      ...mapGetters(['usersSelected'])
     },
 
     created () {
