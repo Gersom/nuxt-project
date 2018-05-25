@@ -1,31 +1,26 @@
-<template lang="html">
-  <div class="">
-    <h2>Hola?</h2>
+<template lang="pug">
+  .UserScreen
+    h2 Hola!
 
-    <button v-on:click="toUserId(2)">
-      usuario numero 2
-    </button>
-  </div>
+    user-list(:list="users")
 </template>
 
 <script>
   import { mapActions, mapGetters } from 'vuex'
+  import UserList from '~/components/UserList.vue'
+
   export default {
+    components: {
+      UserList
+    },
+
     data () {
       return {
       }
     },
 
     methods: {
-      ...mapActions(['beginUsers']),
-      toUserId (id) {
-        this.$router.push({
-          name: 'users-id',
-          params: {
-            id: id
-          }
-        })
-      }
+      ...mapActions(['beginUsers'])
     },
 
     computed: {
