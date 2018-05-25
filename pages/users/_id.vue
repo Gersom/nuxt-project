@@ -9,21 +9,27 @@
 </template>
 
 <script>
-export default {
-  data () {
-    return {
+  import { mapActions, mapGetters } from 'vuex'
+  export default {
+    data () {
+      return {
 
-    }
-  },
+      }
+    },
 
-  methods: {
-    back () {
-      this.$router.push({
-        name: 'users'
-      })
+    methods: {
+      ...mapActions(['requestUserId']),
+      back () {
+        this.$router.push({
+          name: 'users'
+        })
+      }
+    },
+
+    created () {
+      this.requestUserId(this.$route.params.id)
     }
   }
-}
 </script>
 
 <style lang="css">
