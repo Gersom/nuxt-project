@@ -1,20 +1,22 @@
 <template lang="pug">
-  .UserScreen
-    h2 Hola!
-    button(class="button--green",
-        @click="$router.push({name: 'index'})")
-      |Regresar
-
-    user-list(:list="users")
+  .UserScreen.overflow-auto.bg-grey-lighter
+    .container.my-4.mx-auto.flex-col
+      .top.flex.justify-center
+        h2.mr-4 Users!
+        go-back(class="mb-4", text="Go Back", :route="'index'")
+      .list
+        user-list(:list="users")
 </template>
 
 <script>
   import { mapActions, mapGetters } from 'vuex'
   import UserList from '~/components/UserList.vue'
+  import GoBack from '~/components/GoBack.vue'
 
   export default {
     components: {
-      UserList
+      UserList,
+      GoBack
     },
 
     data () {

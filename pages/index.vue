@@ -1,37 +1,25 @@
-<template>
-  <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
+<template lang="pug">
+  .container
+    div
+      logo()
+      h1.title
         GITHUB - USERS
-      </h1>
-      <h2 class="subtitle">
+
+      h2.subtitle
         My awesome Nuxt Project
-      </h2>
-      <div class="links">
-        <button @click="toUsers" class="button--green">
-          Users</button>
-      </div>
-    </div>
-  </section>
+
+      .links
+        go-back(text="Users", route="users")
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-  components: {
-    Logo
-  },
-
-  methods: {
-    toUsers () {
-      this.$router.push({
-        name: 'users'
-      })
+  import Logo from '~/components/Logo.vue'
+  import GoBack from '~/components/GoBack.vue'
+  export default {
+    components: {
+      Logo, GoBack
     }
   }
-}
 </script>
 
 <style>
@@ -48,14 +36,14 @@ export default {
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 4rem;
   color: #35495e;
   letter-spacing: 1px;
 }
 .subtitle
 {
   font-weight: 300;
-  font-size: 42px;
+  font-size: 2rem;
   color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;
