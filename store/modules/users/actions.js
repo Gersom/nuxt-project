@@ -20,19 +20,23 @@ export const beginUsers = ({commit, state}) => {
   })
 }
 
-export const requestUserId = ({commit, state}, id) => {
+export const requestUserId = ({commit, state}, name) => {
   axios({
     method: 'get',
-    url: `${state.api}/users/${id}`,
+    url: `${state.api}/users/${name}`,
     headers: {
       'Content-Type': 'application/json'
     }
   })
   .then(({ data }) => {
-    commit(types.ADD_USER_SELECTED, data)
+    commit(types.UPDATE_USER_SELECTED, data)
     // commit(types.AJAX_CALL_SUCCESS)
   })
   .catch(({response}) => {
     // commit(types.AJAX_CALL_ERROR)
   })
+}
+
+export const defaultUserId = ({commit, state}) => {
+  commit(types.UPDATE_USER_SELECTED, {})
 }

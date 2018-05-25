@@ -12,7 +12,7 @@ const mutations = {
   [types.ADD_USERS] (state, data) {
     state.users = data
   },
-  [types.ADD_USER_SELECTED] (state, data) {
+  [types.UPDATE_USER_SELECTED] (state, data) {
     state.user_selected = data
   }
 }

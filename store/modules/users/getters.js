@@ -3,3 +3,7 @@
 export const users = (state) => {
   return state.users
 }
+
+export const usersSelected = (state) => {
+  return state.user_selected
+}
