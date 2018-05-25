@@ -1,9 +1,6 @@
 <template>
   <div class="VueToNuxtLogo">
-    <div class="Triangle Triangle--two"></div>
-    <div class="Triangle Triangle--one"></div>
-    <div class="Triangle Triangle--three"></div>
-    <div class="Triangle Triangle--four"></div>
+    <img src="https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/03/GitHub-brave-hed-796x418.jpg" alt="">
   </div>
 </template>
 
@@ -16,7 +13,11 @@
   position: relative;
   overflow: hidden;
   height: 180px;
-  width: 245px;
+  width: auto;
+}
+.VueToNuxtLogo img {
+  height: 100%;
+  width: auto;
 }
 .Triangle
 {
