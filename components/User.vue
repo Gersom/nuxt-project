@@ -1,5 +1,5 @@
 <template lang="pug">
-  button.c-user(@click="toUserId(item.id)")
+  button.c-user(@click="toUserId(item.login)")
     figure
       img(:src="item.avatar_url")
 
@@ -23,11 +23,11 @@
     },
 
     methods: {
-      toUserId (id) {
+      toUserId (name) {
         this.$router.push({
           name: 'users-id',
           params: {
-            id: id
+            id: name
           }
         })
       }
