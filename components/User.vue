@@ -1,7 +1,7 @@
 <template lang="pug">
-  button.c-user(@click="toUserId(item.login)")
+  button.c-user.bg-white.p-2.m-2(@click="toUserId(item.login)")
     figure
-      img(:src="item.avatar_url")
+      img.c-user__img(:src="item.avatar_url")
 
     .c-user__content
       p User name: {{item.login}}
@@ -35,6 +35,8 @@
   }
 </script>
 
-<style>
-
+<style lang="stylus">
+  .c-user__img
+    height: 8rem
+    width: auto
 </style>
