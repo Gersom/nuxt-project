@@ -1,4 +1,5 @@
 const pkg = require('./package')
+const axios = require('axios')
 
 module.exports = {
   mode: 'universal',
@@ -67,6 +68,17 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+    }
+  },
+
+  generate: {
+    routes: function () {
+      return axios.get('https://api.github.com/users')
+      .then((res) => {
+        return res.data.map((user) => {
+          return '/users/' + user.id
+        })
+      })
     }
   }
 }
