@@ -1,21 +1,21 @@
 <template lang="pug">
   .UserId
-    .container.my-4.mx-auto.flex-col
-      div.flex.flex-row
+    .container.my-6.mx-auto.flex.flex-col.items-center.justify-center
+      div.flex.text-white
         div.mr-6
           figure.text-center
             img.UserId__img.block.mb-4(:src="usersSelected.avatar_url")
             caption.block {{usersSelected.name}}
             p.block {{usersSelected.login}}
-        div
-          p Blog: {{usersSelected.blog}}
-          p Company: {{usersSelected.company}}
-          p Followers: {{usersSelected.followers}}
-          p Following: {{usersSelected.following}}
-          p Gists: {{usersSelected.public_gists}}
-          p Location: {{usersSelected.location}}
-          p Profile: {{usersSelected.html_url}}
-          p Repositories: {{usersSelected.public_repos}}
+        div.data.text-left
+          p <span>Blog: </span><span>{{usersSelected.blog}}</span>
+          p <span>Company: </span><span>{{usersSelected.company}}</span>
+          p <span>Followers: </span><span>{{usersSelected.followers}}</span>
+          p <span>Following: </span><span>{{usersSelected.following}}</span>
+          p <span>Gists: </span><span>{{usersSelected.public_gists}}</span>
+          p <span>Location: </span><span>{{usersSelected.location}}</span>
+          p <span>Profile: </span><span>{{usersSelected.html_url}}</span>
+          p <span>Repositories: </span><span>{{usersSelected.public_repos}}</span>
 
       go-back(class="mt-4", text="Go Back", :route="'users'")
 </template>
@@ -42,9 +42,19 @@
 </script>
 
 <style lang="stylus">
-  .font-open
-    font-family: 'Open Sans', sans-serif
-  .UserId__img
-    height: 10rem
-    width: auto;
+  .UserId
+    background-color: #1b1a1f
+    overflow: auto;
+    & > *
+      min-height: 100vh
+    &__img
+      height: 10rem
+      width: auto;
+    .data p
+      &
+        color: #737682
+        font-weight: 600
+      &> *:nth-child(1)
+        font-weight: 300
+        color: #fff
 </style>
