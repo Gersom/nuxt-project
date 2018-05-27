@@ -7,11 +7,14 @@
 
 <script>
   import User from '~/components/User.vue'
+  import { mapActions, mapGetters } from 'vuex'
+
   export default {
     name: 'UserList',
     components: {
       User
     },
+
     props: {
       list: {
         type: Array,
@@ -19,6 +22,10 @@
           return []
         }
       }
+    },
+
+    computed: {
+      ...mapGetters(['wantedUsers'])
     }
   }
 </script>

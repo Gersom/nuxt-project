@@ -1,22 +1,21 @@
 <template lang="pug">
   .UserScreen.overflow-auto.text-white
-    .container.my-2.mx-auto.flex-col
-      .top.flex.justify-center
-        h2.mr-4 Users!
-        go-back(class="mb-4", text="Go Back", :route="'index'")
+    .container.mx-auto.flex-col
+      .top.block
+        navigation()
       .list
-        user-list(:list="users")
+        user-list(:list="wantedUsers")
 </template>
 
 <script>
   import { mapActions, mapGetters } from 'vuex'
+  import Navigation from '~/components/Navigation.vue'
   import UserList from '~/components/UserList.vue'
-  import GoBack from '~/components/GoBack.vue'
 
   export default {
     components: {
-      UserList,
-      GoBack
+      Navigation,
+      UserList
     },
 
     methods: {
@@ -26,7 +25,7 @@
     },
 
     computed: {
-      ...mapGetters(['users'])
+      ...mapGetters(['wantedUsers'])
     },
 
     created () {
@@ -41,4 +40,7 @@
 <style lang="stylus">
   .UserScreen
     background-color: #1b1a1f
+    min-height: 100vh
+    .top
+      width: 100%
 </style>

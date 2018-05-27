@@ -9,7 +9,7 @@
         |My awesome Nuxt Project
 
       .links
-        go-back(text="Users", route="users")
+        go-back(text="See Users", route="users")
 </template>
 
 <script>
