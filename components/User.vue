@@ -1,14 +1,15 @@
 <template lang="pug">
-  button.c-user.bg-white.p-2.m-2(@click="toUserId(item.login)")
-    figure
+  button.c-user.p-4.m-1.flex(
+    @click="toUserId(item.login)")
+    figure.pr-4.flex-none
       img.c-user__img(:src="item.avatar_url")
 
-    .c-user__content
-      p User name: {{item.login}}
-      p Id: {{item.id}}
-      p Profile: {{item.html_url}}
-      p Site admin: {{item.site_admin}}
-      p Type: {{item.type}}
+    .c-user__content.text-left
+      p <span>User name: </span><span>{{item.login}}</span>
+      p <span>Id: </span><span>{{item.id}}</span>
+      p <span>Profile: </span><span>{{item.html_url}}</span>
+      p <span>Site admin: </span><span>{{item.site_admin}}</span>
+      p <span>Type: </span><span>{{item.type}}</span>
 </template>
 
 <script>
@@ -36,7 +37,17 @@
 </script>
 
 <style lang="stylus">
-  .c-user__img
-    height: 8rem
-    width: auto
+  .c-user
+    width: 25rem
+    background-color: #2c2d31
+    &__img
+      height: 8rem
+      width: auto
+    &__content p
+      &
+        color: #737682
+        font-weight: 600
+      &> *:nth-child(1)
+        font-weight: 300
+        color: #fff
 </style>

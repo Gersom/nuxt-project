@@ -11,4 +11,7 @@
 
   .border-solid
     border-style: solid;
+
+  // .border-white
+  //   border-color: #fff;
 </style>

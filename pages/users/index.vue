@@ -1,6 +1,6 @@
 <template lang="pug">
-  .UserScreen.overflow-auto.bg-grey-lighter
-    .container.my-4.mx-auto.flex-col
+  .UserScreen.overflow-auto.text-white
+    .container.my-2.mx-auto.flex-col
       .top.flex.justify-center
         h2.mr-4 Users!
         go-back(class="mb-4", text="Go Back", :route="'index'")
@@ -17,11 +17,6 @@
     components: {
       UserList,
       GoBack
-    },
-
-    data () {
-      return {
-      }
     },
 
     methods: {
@@ -43,5 +38,7 @@
   }
 </script>
 
-<style lang="css">
+<style lang="stylus">
+  .UserScreen
+    background-color: #1b1a1f
 </style>
