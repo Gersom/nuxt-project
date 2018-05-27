@@ -1,5 +1,5 @@
 <template lang="pug">
-  .container
+  .container.mx-auto
     div
       logo()
       h1.title
