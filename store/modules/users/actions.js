@@ -40,3 +40,10 @@ export const requestUserId = ({commit, state}, name) => {
 export const defaultUserId = ({commit, state}) => {
   commit(types.UPDATE_USER_SELECTED, {})
 }
+
+export const updateWantedUsers = ({commit, state}, userResult) => {
+  commit(types.UPDATE_WANTED_USERS, userResult)
+}
+export const allWantedUsers = ({commit, state}) => {
+  commit(types.ALL_WANTED_USERS)
+}

@@ -5,15 +5,23 @@ import * as actions from './actions'
 const state = {
   users: [],
   user_selected: {},
-  api: 'https://api.github.com'
+  api: 'https://api.github.com',
+  wanted_users: []
 }
 
 const mutations = {
   [types.ADD_USERS] (state, data) {
     state.users = data
+    state.wanted_users = data
   },
   [types.UPDATE_USER_SELECTED] (state, data) {
     state.user_selected = data
+  },
+  [types.UPDATE_WANTED_USERS] (state, data) {
+    state.wanted_users = data
+  },
+  [types.ALL_WANTED_USERS] (state) {
+    state.wanted_users = state.users
   }
 }
 

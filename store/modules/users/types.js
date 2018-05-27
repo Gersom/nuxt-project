@@ -1,3 +1,5 @@
 // mutations
 export const ADD_USERS = 'ADD_USERS'
 export const UPDATE_USER_SELECTED = 'UPDATE_USER_SELECTED'
+export const UPDATE_WANTED_USERS = 'UPDATE_WANTED_USERS'
+export const ALL_WANTED_USERS = 'ALL_WANTED_USERS'

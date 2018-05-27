@@ -7,3 +7,7 @@ export const users = (state) => {
 export const usersSelected = (state) => {
   return state.user_selected
 }
+
+export const wantedUsers = (state) => {
+  return state.wanted_users
+}
