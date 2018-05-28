@@ -1,5 +1,5 @@
 <template lang="pug">
-  .c-preview-user-data
+  .c-preview-user-data.w-100
     .c-preview-user-data__data
       p <span>User name: </span><span>{{user_name}}</span>
       p <span>Github: </span><span>{{profile_url}}</span>

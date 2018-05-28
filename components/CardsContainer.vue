@@ -1,6 +1,6 @@
 <template lang="pug">
   .c-cards-container
-    .c-cards-container__item
+    .c-cards-container__item.flex.flex-wrap.justify-center
       card(v-for="item in list",
           :item="item",
           :key="item.id")
