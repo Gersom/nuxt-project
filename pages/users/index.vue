@@ -1,5 +1,5 @@
 <template lang="pug">
-  .UserScreen.overflow-auto
+  .UserScreen.ScreenTransition.overflow-auto
     .container.mx-auto.flex-col
       .top.block.h-16.flex.justify-center.bg-white.fixed.pin-t.pin-l.z-10
         navigation-bar()

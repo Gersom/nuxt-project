@@ -1,5 +1,5 @@
 <template lang="pug">
-  .UserId
+  .UserId.ScreenTransition
     .container.my-6.mx-auto.flex.flex-col.items-center.justify-center
       div.flex
         div.mr-6

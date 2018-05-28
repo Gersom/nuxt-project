@@ -1,5 +1,5 @@
 <template lang="pug">
-  .IndexScreen
+  .IndexScreen.ScreenTransition
     .container.mx-auto.flex.flex-col
       logo()
       h1.title
