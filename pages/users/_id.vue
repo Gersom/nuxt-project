@@ -16,17 +16,17 @@
           p <span>Location: </span><span>{{usersSelected.location}}</span>
           p <span>Profile: </span><span>{{usersSelected.html_url}}</span>
           p <span>Repositories: </span><span>{{usersSelected.public_repos}}</span>
-
-      go-back(class="mt-4", text="Go Back", :route="'users'")
+      //-
+      //- go-back(class="mt-4", text="Go Back", :route="'users'")
 </template>
 
 <script>
   import { mapActions, mapGetters } from 'vuex'
-  import GoBack from '~/components/GoBack.vue'
+  // import GoBack from '~/components/GoBack.vue'
   export default {
-    components: {
-      GoBack
-    },
+    // components: {
+    //   GoBack
+    // },
 
     methods: {
       ...mapActions(['requestUserId']),

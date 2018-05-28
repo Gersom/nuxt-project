@@ -3,9 +3,9 @@ import * as getters from './getters'
 import * as actions from './actions'
 
 const state = {
-  users: [],
-  user_selected: {},
   api: 'https://api.github.com',
+  user_selected: {},
+  users: [],
   wanted_users: []
 }
 

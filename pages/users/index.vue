@@ -1,21 +1,21 @@
 <template lang="pug">
   .UserScreen.overflow-auto.text-white
     .container.mx-auto.flex-col
-      .top.block
-        navigation()
+      //- .top.block
+      //-   navigation-bar()
       .list
-        user-list(:list="wantedUsers")
+        cards-container(:list="wantedUsers")
 </template>
 
 <script>
   import { mapActions, mapGetters } from 'vuex'
-  import Navigation from '~/components/Navigation.vue'
-  import UserList from '~/components/UserList.vue'
+  import NavigationBar from '~/components/NavigationBar.vue'
+  import CardsContainer from '~/components/CardsContainer.vue'
 
   export default {
     components: {
-      Navigation,
-      UserList
+      NavigationBar,
+      CardsContainer
     },
 
     methods: {

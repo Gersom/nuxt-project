@@ -1,5 +1,5 @@
 <template lang="pug">
-  div
+  .c-button
     button(
       @click="$router.push({name: route})",
       class="border-solid border-green hover:bg-green rounded px-4 py-2 text-green hover:text-white")
@@ -20,6 +20,3 @@
     }
   }
 </script>
-
-<style lang="css">
-</style>

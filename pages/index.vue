@@ -1,25 +1,22 @@
 <template lang="pug">
-  .container.mx-auto
-    div
+  .IndexScreen
+    .container.mx-auto
       logo()
       h1.title
         |GITHUB - USERS
 
       h2.subtitle
         |My awesome Nuxt Project
-
-      .links
-        go-back(text="See Users", route="users")
+      //- .links
+      //-   go-back(text="See Users", route="users")
 </template>
 
 <script>
   import Logo from '~/components/Logo.vue'
-  import GoBack from '~/components/GoBack.vue'
+  //- import GoBack from '~/components/GoBack.vue'
 
   export default {
-    components: {
-      Logo, GoBack
-    }
+    components: { Logo }
   }
 </script>
 
