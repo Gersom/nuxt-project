@@ -11,7 +11,7 @@
         class="h-full w-auto")
     p.mt-4
       span.text-grey-darker User name: 
-      span {{user_name}}
+      span.text-white {{user_name}}
     p
       span.text-grey-darker {{user_type}}
 </template>

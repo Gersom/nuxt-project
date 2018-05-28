@@ -1,5 +1,5 @@
 <template lang="pug">
-  .UserScreen.overflow-auto.text-white
+  .UserScreen.overflow-auto
     .container.mx-auto.flex-col
       //- .top.block
       //-   navigation-bar()

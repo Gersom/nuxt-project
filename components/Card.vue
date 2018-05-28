@@ -1,5 +1,5 @@
 <template lang="pug">
-  .c-card(class="w-64 relative h-48 cursor-pointer m-2")
+  .c-card(class="w-64 relative h-48 m-2")
     .c-card__container(class="absolute w-100 h-100")
       .c-card__front(class="w-64 h-48 absolute overflow-hidden z-20")
         user-preview(
