@@ -1,14 +1,17 @@
 <template lang="pug">
   .IndexScreen
-    .container.mx-auto
+    .container.mx-auto.flex.flex-col
       logo()
       h1.title
         |GITHUB - USERS
 
       h2.subtitle
         |My awesome Nuxt Project
-      //- .links
-      //-   go-back(text="See Users", route="users")
+      .links
+        button(
+          @click="$router.push({name: 'users'})",
+          class="border-solid border-grey text-grey w-32 h-8 hover:border-red-light hover:text-red-light text-sm")
+          |See users!
 </template>
 
 <script>
@@ -21,6 +24,9 @@
 </script>
 
 <style>
+  .IndexScreen {
+    background-color: #1b1a1f
+  }
   .container
   {
     min-height: 100vh;
