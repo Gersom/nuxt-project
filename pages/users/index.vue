@@ -1,8 +1,8 @@
 <template lang="pug">
   .UserScreen.overflow-auto
     .container.mx-auto.flex-col
-      //- .top.block
-      //-   navigation-bar()
+      .top.block.h-16.flex.justify-center.bg-white.fixed.pin-t.pin-l.z-10
+        navigation-bar()
       .list
         cards-container(:list="wantedUsers")
 </template>
@@ -43,4 +43,6 @@
     min-height: 100vh
     .top
       width: 100%
+    .list
+      margin-top: 5rem
 </style>

@@ -1,11 +1,11 @@
 <template lang="pug">
   .c-search
-    input.c-navigation__input(
+    input.c-search__input(
       v-model="text_search",
       type="text",
       placeholder="Search",
       @keyup.esc="text_search = ''")
-    span.c-navigation__icon-cross(@click="text_search = ''") x
+    //- span.c-search__icon-cross(@click="text_search = ''") x
 </template>
 
 <script>
@@ -63,3 +63,11 @@
     }
   }
 </script>
+
+<style lang="stylus">
+  .c-search
+    &__input
+      padding: 0.5rem
+      font-size: 0.8rem
+      border: 1px solid #aaa
+</style>

@@ -1,32 +1,51 @@
 <template lang="pug">
   .UserId
     .container.my-6.mx-auto.flex.flex-col.items-center.justify-center
-      div.flex.text-white
+      div.flex
         div.mr-6
           figure.text-center
             img.UserId__img.block.mb-4(:src="usersSelected.avatar_url")
-            caption.block {{usersSelected.name}}
-            p.block {{usersSelected.login}}
+            caption.block.text-white {{usersSelected.name}}
+            p.block.text-white {{usersSelected.login}}
         div.data.text-left
-          p <span>Blog: </span><span>{{usersSelected.blog}}</span>
-          p <span>Company: </span><span>{{usersSelected.company}}</span>
-          p <span>Followers: </span><span>{{usersSelected.followers}}</span>
-          p <span>Following: </span><span>{{usersSelected.following}}</span>
-          p <span>Gists: </span><span>{{usersSelected.public_gists}}</span>
-          p <span>Location: </span><span>{{usersSelected.location}}</span>
-          p <span>Profile: </span><span>{{usersSelected.html_url}}</span>
-          p <span>Repositories: </span><span>{{usersSelected.public_repos}}</span>
-      //-
-      //- go-back(class="mt-4", text="Go Back", :route="'users'")
+          p
+            span.text-grey-darker Blog:
+            span.text-white {{usersSelected.blog}}
+          p
+            span.text-grey-darker Company:
+            span.text-white {{usersSelected.company}}
+          p
+            span.text-grey-darker Followers:
+            span.text-white {{usersSelected.followers}}
+          p
+            span.text-grey-darker Following:
+            span.text-white {{usersSelected.following}}
+          p
+            span.text-grey-darker Gists:
+            span.text-white {{usersSelected.public_gists}}
+          p
+            span.text-grey-darker Location:
+            span.text-white {{usersSelected.location}}
+          p
+            span.text-grey-darker Profile:
+            span.text-white {{usersSelected.html_url}}
+          p
+            span.text-grey-darker Repositories:
+            span.text-white {{usersSelected.public_repos}}
+
+      div.flex.mt-8
+        a(:href="usersSelected.html_url",
+          target="_blank",
+          class="no-underline block mr-2 flex items-center justify-center border-solid border-red text-red w-32 h-8 hover:bg-red hover:text-white text-sm")
+          |Github
+        button(@click="$router.push({name: 'users'})",
+          class="mr-2 border-solid border-red text-red w-32 h-8 hover:bg-red hover:text-white text-sm")
+          |Go Back!
 </template>
 
 <script>
   import { mapActions, mapGetters } from 'vuex'
-  // import GoBack from '~/components/GoBack.vue'
   export default {
-    // components: {
-    //   GoBack
-    // },
 
     methods: {
       ...mapActions(['requestUserId']),
@@ -50,11 +69,4 @@
     &__img
       height: 10rem
       width: auto;
-    .data p
-      &
-        color: #737682
-        font-weight: 600
-      &> *:nth-child(1)
-        font-weight: 300
-        color: #fff
 </style>
